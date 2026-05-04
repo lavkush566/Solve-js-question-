@@ -1,10 +1,6 @@
 //this is examole of reverse string 
 
-function reversestring(strings) {
-    return strings.split("").reverse().join('');
-}
-console.log(reversestring('hello'));
-
+ 
 //This is another one
 
 let str='hello';
@@ -67,3 +63,32 @@ function findmedian(array){
     return array[median];
 }
 console.log(findmedian(arr));
+
+
+//question  no 7 find mode 
+
+let array =[1,2,2,3,2,3,3,3,3,3,,4,5];
+function findmode(array){
+    let count={};
+    let mode=array[0];
+    let maxcount =0;
+    for(let num of array){
+        count[num]=(count[num]||0)+1;
+        if(count[num]>maxcount){
+            maxcount=count[num];
+            mode=num;
+        }
+    }
+    return mode;
+}
+console.log(findmode(array));
+
+//Question no 8 range 
+
+let array=[1,2,3,4,5];
+
+function findrange(array){
+    return Math.max(...array)-Math.min(...array);
+
+}
+console.log(findrange(array));
